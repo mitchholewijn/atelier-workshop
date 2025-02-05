@@ -44,5 +44,4 @@ animations = [{
 [node name="AnimatedSprite2D" parent="." index="3"]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_oc4xn")
-autoplay = "default"
 frame_progress = 0.472608

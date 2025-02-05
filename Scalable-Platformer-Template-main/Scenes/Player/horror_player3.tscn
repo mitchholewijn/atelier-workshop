@@ -90,7 +90,7 @@ animations = [{
 [node name="Player" instance=ExtResource("1_7u36n")]
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(0, -7)
+position = Vector2(0, 5.6875)
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_22jje")
@@ -98,4 +98,4 @@ animation = &"walk"
 frame_progress = 0.0
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2(-1, -6.75)
+position = Vector2(-1, 12.2188)

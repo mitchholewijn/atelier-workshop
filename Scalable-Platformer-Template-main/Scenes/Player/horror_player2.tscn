@@ -103,6 +103,9 @@ animations = [{
 
 [node name="Player" instance=ExtResource("1_og3ls")]
 
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 6.59375)
+
 [node name="AnimatedSprite2D" parent="." index="1"]
 position = Vector2(0, -26)
 scale = Vector2(0.2, 0.2)

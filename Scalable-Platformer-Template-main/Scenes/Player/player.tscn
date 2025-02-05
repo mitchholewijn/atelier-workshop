@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cgcxsn1pwxfiy" path="res://Assets/Player/p1_walk/p1_walk11.png" id="12_xmdyi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbkd8"]
-size = Vector2(51, 74)
+size = Vector2(51, 70.4062)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dkb7f"]
 animations = [{
@@ -86,7 +86,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xvbrh"]
-size = Vector2(21, 33.625)
+size = Vector2(29.5, 71.5625)
 
 [sub_resource type="Animation" id="Animation_xj5sw"]
 resource_name = "Die"

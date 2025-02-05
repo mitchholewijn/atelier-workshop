@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwrmglmyng6rx"]
+
+[ext_resource type="PackedScene" uid="uid://b6n2e6kkf0hqu" path="res://Scenes/Enemies/crawler_enemy.tscn" id="1_lywv5"]
+[ext_resource type="Texture2D" uid="uid://fr3ylrpm2x8y" path="res://Assets/player_custom/Evil cat en harry/Spritesheet.png" id="2_igm0r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glmal"]
+atlas = ExtResource("2_igm0r")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0ccf"]
+atlas = ExtResource("2_igm0r")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwxgv"]
+atlas = ExtResource("2_igm0r")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4rs5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glmal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0ccf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwxgv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CrawlerEnemy" instance=ExtResource("1_lywv5")]
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+texture_filter = 1
+position = Vector2(0, -4)
+sprite_frames = SubResource("SpriteFrames_4rs5c")
+autoplay = "default"

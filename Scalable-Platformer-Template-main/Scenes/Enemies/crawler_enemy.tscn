@@ -20,10 +20,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dd41j"]
-size = Vector2(31, 22)
+size = Vector2(24.5, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdibw"]
-size = Vector2(33.5, 20)
+size = Vector2(25, 25.5)
 
 [sub_resource type="Animation" id="Animation_h7aoi"]
 resource_name = "FlipLeft"

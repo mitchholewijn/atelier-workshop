@@ -106,4 +106,4 @@ animation = &"default"
 frame_progress = 0.252569
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2(0, 0.5)
+position = Vector2(1.25, 18)

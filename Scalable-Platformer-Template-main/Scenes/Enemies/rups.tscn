@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1thwtqhprowl"]
+
+[ext_resource type="PackedScene" uid="uid://b6n2e6kkf0hqu" path="res://Scenes/Enemies/crawler_enemy.tscn" id="1_faoet"]
+[ext_resource type="Texture2D" uid="uid://bc28snr5deqtr" path="res://Assets/player_custom/wolf/Sprite rups.png" id="2_y0lcy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee6w8"]
+atlas = ExtResource("2_y0lcy")
+region = Rect2(0, 0, 700, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhobn"]
+atlas = ExtResource("2_y0lcy")
+region = Rect2(700, 0, 700, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk7x5"]
+atlas = ExtResource("2_y0lcy")
+region = Rect2(1400, 0, 700, 350)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4rs5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee6w8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhobn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk7x5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_csdc6"]
+size = Vector2(117, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsb35"]
+size = Vector2(117.5, 49.25)
+
+[node name="CrawlerEnemy" instance=ExtResource("1_faoet")]
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+texture_filter = 1
+position = Vector2(0, -17)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_4rs5c")
+autoplay = "default"
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_csdc6")
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+shape = SubResource("RectangleShape2D_vsb35")
+
+[node name="WallCast" parent="." index="3"]
+scale = Vector2(1.22, 1)

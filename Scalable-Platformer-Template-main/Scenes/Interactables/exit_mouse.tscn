@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://ykx2jjlycjx0"]
+
+[ext_resource type="PackedScene" uid="uid://boic0ihw3y8wu" path="res://Scenes/Interactables/exit.tscn" id="1_su2uy"]
+[ext_resource type="Texture2D" uid="uid://fr3ylrpm2x8y" path="res://Assets/player_custom/Evil cat en harry/Spritesheet.png" id="2_svaed"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rt3r7"]
+atlas = ExtResource("2_svaed")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86m6r"]
+atlas = ExtResource("2_svaed")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a76d6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rt3r7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86m6r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Exit" instance=ExtResource("1_su2uy")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 3.5)
+
+[node name="Sprite2D" parent="." index="1"]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("2_svaed")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_a76d6")
