@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://w3iaigeag3n2"
+path="res://.godot/imported/vase_4_recommended.png-f243be94723f5b09a98ac615e7958458.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Tiles/Scavenge Legends Complete World V1.1/128 pixels (recommended size for full HD)/vase_4_recommended.png"
+dest_files=["res://.godot/imported/vase_4_recommended.png-f243be94723f5b09a98ac615e7958458.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

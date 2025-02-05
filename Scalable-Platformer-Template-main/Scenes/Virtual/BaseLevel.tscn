@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://vsxauni78yw6"]
+[gd_scene load_steps=29 format=3 uid="uid://vsxauni78yw6"]
 
 [ext_resource type="Script" path="res://Scenes/Virtual/BaseLevel.gd" id="1_gi0ax"]
 [ext_resource type="PackedScene" uid="uid://dk6a56e3n3mbc" path="res://Scenes/Player/player.tscn" id="2_2wr2r"]
@@ -12,7 +12,16 @@
 [ext_resource type="PackedScene" uid="uid://bhgdgjy2jxwjs" path="res://Scenes/Enemies/flyer_enemy.tscn" id="9_ixmm2"]
 [ext_resource type="PackedScene" uid="uid://ubm3g25m2mvs" path="res://Scenes/UI/level_ui.tscn" id="9_ksn3r"]
 [ext_resource type="Texture2D" uid="uid://c8rpy8gjxvv2l" path="res://Assets/Tiles/tiles_sheet.png" id="11_27ldp"]
+[ext_resource type="PackedScene" uid="uid://8rh7wv077gxn" path="res://Scenes/Enemies/ghost.tscn" id="12_wvoyb"]
+[ext_resource type="PackedScene" uid="uid://beknwe0s3bjfo" path="res://Scenes/Player/wolf.tscn" id="13_e8vvd"]
 [ext_resource type="Texture2D" uid="uid://d07egoj6uorf4" path="res://Assets/rock.png" id="13_r0po2"]
+[ext_resource type="PackedScene" uid="uid://dvdoqu2twb0e5" path="res://Scenes/Player/lindy_player.tscn" id="14_3m13p"]
+[ext_resource type="PackedScene" uid="uid://brys6pksjk4bs" path="res://Scenes/Player/horror_player1.tscn" id="15_0dg6u"]
+[ext_resource type="PackedScene" uid="uid://cutlr2kqw0xui" path="res://Scenes/Player/horror_player2.tscn" id="16_6osnb"]
+[ext_resource type="PackedScene" uid="uid://djtbevepf1r74" path="res://Scenes/Player/horror_player3.tscn" id="17_2x8od"]
+[ext_resource type="PackedScene" uid="uid://cm20nx37brwlm" path="res://Scenes/Player/horror_player4.tscn" id="18_qi3r7"]
+[ext_resource type="PackedScene" uid="uid://b65v123vmvuee" path="res://Scenes/Player/harry.tscn" id="19_lfhrs"]
+[ext_resource type="PackedScene" uid="uid://b7oq1s2gtb68h" path="res://Scenes/Player/mario.tscn" id="21_khccl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6pwhb"]
 texture = ExtResource("2_hswp3")
@@ -408,6 +417,7 @@ scenes/6/scene = ExtResource("8_vveao")
 resource_name = "Enemies"
 scenes/1/scene = ExtResource("6_3c4nd")
 scenes/2/scene = ExtResource("9_ixmm2")
+scenes/3/scene = ExtResource("12_wvoyb")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vrgry"]
 texture = ExtResource("11_27ldp")
@@ -570,6 +580,17 @@ texture_region_size = Vector2i(70, 70)
 10:12/0 = 0
 11:12/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_rdlv5"]
+resource_name = "Player"
+scenes/1/scene = ExtResource("13_e8vvd")
+scenes/2/scene = ExtResource("14_3m13p")
+scenes/3/scene = ExtResource("15_0dg6u")
+scenes/4/scene = ExtResource("16_6osnb")
+scenes/5/scene = ExtResource("17_2x8od")
+scenes/6/scene = ExtResource("18_qi3r7")
+scenes/7/scene = ExtResource("19_lfhrs")
+scenes/8/scene = ExtResource("21_khccl")
+
 [sub_resource type="TileSet" id="TileSet_2ptkc"]
 tile_size = Vector2i(70, 70)
 physics_layer_0/collision_layer = 1
@@ -581,6 +602,7 @@ sources/0 = SubResource("TileSetAtlasSource_6pwhb")
 sources/1 = SubResource("TileSetScenesCollectionSource_muqlf")
 sources/2 = SubResource("TileSetScenesCollectionSource_3eqbe")
 sources/3 = SubResource("TileSetAtlasSource_vrgry")
+sources/4 = SubResource("TileSetScenesCollectionSource_rdlv5")
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_gi0ax")

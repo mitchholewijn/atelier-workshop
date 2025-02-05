@@ -71,9 +71,9 @@ func kill_player():
 	respawn.call_deferred()
 
 func respawn():
-	player.queue_free()
-	player = player_scene.instantiate()
-	$TileMap.add_child(player)
+	#player.queue_free()
+	#player = player_scene.instantiate()
+	#$TileMap.add_child(player)
 	player.set_up_camera_limit(boundry_rect)
 	if current_checkpoint:
 		player.global_position = current_checkpoint.global_position

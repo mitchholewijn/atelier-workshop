@@ -1,0 +1,102 @@
+[gd_scene load_steps=12 format=3 uid="uid://b65v123vmvuee"]
+
+[ext_resource type="PackedScene" uid="uid://dk6a56e3n3mbc" path="res://Scenes/Player/player.tscn" id="1_w0810"]
+[ext_resource type="Texture2D" uid="uid://fr3ylrpm2x8y" path="res://Assets/player_custom/Evil cat en harry/Spritesheet.png" id="5_watlk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbuag"]
+atlas = ExtResource("5_watlk")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egmhc"]
+atlas = ExtResource("5_watlk")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is1wd"]
+atlas = ExtResource("5_watlk")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frapu"]
+atlas = ExtResource("5_watlk")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juecx"]
+atlas = ExtResource("5_watlk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0ijk"]
+atlas = ExtResource("5_watlk")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awpcm"]
+atlas = ExtResource("5_watlk")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_353ay"]
+atlas = ExtResource("5_watlk")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qlkqf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbuag")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egmhc")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is1wd")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frapu")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juecx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0ijk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awpcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_353ay")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" instance=ExtResource("1_w0810")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(1.5, 1.5)
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_qlkqf")
+animation = &"default"
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(2, 15)
