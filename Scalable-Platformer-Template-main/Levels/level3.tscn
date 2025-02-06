@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq54msuccj0tn"]
+
+[ext_resource type="PackedScene" uid="uid://vsxauni78yw6" path="res://Scenes/Virtual/BaseLevel.tscn" id="1_ympj2"]
+
+[node name="Level" instance=ExtResource("1_ympj2")]
+
+[node name="TileMap" parent="." index="1"]
+position = Vector2(-1, 0)
